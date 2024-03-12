@@ -1,6 +1,6 @@
 import { check } from "express-validator";
 
-export const validarDatosClient = [
+export const validarCreateDatosClient = [
   check("identificacion", "La identificación es obligatoria, max 11 caracteres")
     .not()
     .isEmpty()
@@ -30,7 +30,7 @@ export const validarDatosClient = [
     .isLength({ min: 6 }),
 ];
 
-export const validarDatesClient = [
+export const validarUpdateDatesClient = [
     check("nombres", "El nombre es obligatorio, max 50 caracteres")
       .not()
       .isEmpty()
