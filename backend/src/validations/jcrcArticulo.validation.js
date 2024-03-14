@@ -26,6 +26,7 @@ export const validarCreateDatosArticulos = [
       return true;
     }),
 ];
+
 export const validarUpdateDatosArticulos = [
   check("nombre", "EL nombre del articulo es obligatorio, max 50 caracteres")
     .not()

@@ -24,18 +24,16 @@ const validarAlquiler = new mongoose.Schema(
     },
     cliente: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "cliente",
+      ref: "Cliente",
       required: true,
     },
     articulo: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "articulo",
+      ref: "Articulo",
       required: true,
     },
   },
   {
     timestamps: true,
-  }
-);
-
+  });
 export default mongoose.model("Alquiler", validarAlquiler);

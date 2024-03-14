@@ -23,6 +23,7 @@ export const validarCreateDatosAlquiler = [
   check("cliente", "El cliente del interes es obligatorio").not().isEmpty(),
   check("articulo", "El articulo del interes es obligatorio").not().isEmpty(),
 ];
+
 export const validarUpdateDatosAlquiler = [
   check("valor", "El valor del Alquiler es obligatorio")
     .not()
