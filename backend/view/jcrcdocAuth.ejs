@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Documentación de API REST de prendería</h1>
+    <h2>EndPoint de alquiler</h2>
+    <h3>Crear cliente</h3>
+    <table>
+      <tr>
+        <td>NÚMERO:</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>NOMBRE DEL SERVICIO</td>
+        <td>Crear cliente</td>
+      </tr>
+      <tr>
+        <td>URI</td>
+        <td>/user/registerClient</td>
+      </tr>
+      <tr>
+        <td>DESCRIPCIÓN</td>
+        <td>Permite crear un cliente en mongoDB</td>
+      </tr>
+      <tr>
+        <td>VERBO HTTP</td>
+        <td>POST</td>
+      </tr>
+      <tr>
+        <td>HEADER</td>
+        <td>null</td>
+      </tr>
+      <tr>
+        <td>USUARIOS</td>
+        <td>Clientes</td>
+      </tr>
+      <tr>
+        <td>PETICION BODY</td>
+        <td>
+          json: { "identificacion":1084252915, "nombres":"Andres Ceron",
+          "direccion":"Isnos-Huila", "telefono":"3186452162",
+          "fecha_nac":"2006-08-10", "password":"123456789" }
+        </td>
+      </tr>
+      <tr>
+        <td>RESPUESTA JSON</td>
+        <td>
+          Correcto: message: "Cliente registrado con exito"<br />
+          Incorrecto: message:"Error al registrar el cliente"<br />
+          Error: message: `Error en el sistema + error`
+        </td>
+      </tr>
+      <tr>
+        <td>DESARROLLADOR</td>
+        <td>Juan Camilo Realpe Ceron</td>
+      </tr>
+      <tr>
+        <td>Repositorio</td>
+        <td>Null</td>
+      </tr>
+    </table>
+    
+    <h3>Validar Token</h3>
+    <table>
+      <tr>
+        <td>NÚMERO:</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>NOMBRE DEL SERVICIO</td>
+        <td>Validar Token</td>
+      </tr>
+      <tr>
+        <td>URI</td>
+        <td>/validar</td>
+      </tr>
+      <tr>
+        <td>DESCRIPCIÓN</td>
+        <td>Permite validar un usuario y generar un token</td>
+      </tr>
+      <tr>
+        <td>VERBO HTTP</td>
+        <td>POST</td>
+      </tr>
+      <tr>
+        <td>HEADER</td>
+        <td>null</td>
+      </tr>
+      <tr>
+        <td>USUARIOS</td>
+        <td>Clientes</td>
+      </tr>
+      <tr>
+        <td>PETICION BODY</td>
+        <td>
+          json: {
+            "identificacion": 1084252915,
+            "password": "123456789"
+        }
+        </td>
+      </tr>
+      <tr>
+        <td>RESPUESTA JSON</td>
+        <td>
+          Incorrecto: message:"Error no se encontro al cliente"<br />
+          Correcto:  client: cliente, token, message: "Cliente validado" <br />
+          Error en datos:  message: "Identificación o password incorrectos" <br />
+          Error: message: `Error en el sistema + error`
+        </td>
+      </tr>
+      <tr>
+        <td>DESARROLLADOR</td>
+        <td>Juan Camilo Realpe Ceron</td>
+      </tr>
+      <tr>
+        <td>Repositorio</td>
+        <td>Null</td>
+      </tr>
+    </table>
+    
+    <h3>Verificar Token</h3>
+    <table>
+      <tr>
+        <td>NÚMERO:</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>NOMBRE DEL SERVICIO</td>
+        <td>Verificar Token</td>
+      </tr>
+      <tr>
+        <td>URI</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>DESCRIPCIÓN</td>
+        <td>Permite verificar los token de los usuario en el proyecto</td>
+      </tr>
+      <tr>
+        <td>VERBO HTTP</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>HEADER</td>
+        <td>token : token</td>
+      </tr>
+      <tr>
+        <td>USUARIOS</td>
+        <td>Clientes</td>
+      </tr>
+      <tr>
+        <td>PETICION BODY</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>RESPUESTA JSON</td>
+        <td>
+          Correcto: next() <br />
+          Error en datos: message: "No autorizado" <br />
+          Incorrecto: message: "Token requerido" <br />
+          Error: message: `Error en el sistema + error`
+        </td>
+      </tr>
+      <tr>
+        <td>DESARROLLADOR</td>
+        <td>Juan Camilo Realpe Ceron</td>
+      </tr>
+      <tr>
+        <td>Repositorio</td>
+        <td>Null</td>
+      </tr>
+    </table>
+  </body>
+</html>

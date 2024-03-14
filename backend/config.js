@@ -1,0 +1,1 @@
+export const AUT_TOKEN_SECRET = "seguridadmaestraprenderia" 

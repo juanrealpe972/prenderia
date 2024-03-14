@@ -1,39 +1,50 @@
 import { check } from "express-validator";
 
 export const validarCreateDatosInteres = [
-  check("meses", "Los meses de intereses son obligatorios")
+  check("meses", "Los meses de intereses son obligatorios").not().isEmpty(),
+  check("fecha", "La fecha de los intereses en obligatoria")
     .not()
     .isEmpty()
     .isISO8601()
     .toDate(),
-  check("fecha", "La fecha de los intereses en obligatoria")
-    .not()
-    .isISO8601()
-    .toDate()
-    .isEmpty(),
   check("valor", "El valor de los intereses en obligatorio")
     .not()
     .isEmpty()
     .isNumeric({ no_symbols: true }),
-  check("alquiler", "El alquiler del interes es obligatorio")
+  check("alquiler", "El alquiler del interes es obligatorio").not().isEmpty(),
+  check("estado", "El estado del interes es obligatorio")
+    .custom((value) => {
+      const estado = ["pagado", "sin pagar"];
+      if (!estado.includes(value)) {
+        throw new Error("Estado inválido");
+      }
+      return true;
+    })
     .not()
-    .isEmpty()
-    .isNumeric(),
+    .isEmpty(),
 ];
 
 export const validarUpdateDatosInteres = [
   check("meses", "Los meses de intereses son obligatorios")
     .not()
-    .isEmpty()
-    .isISO8601()
-    .toDate(),
+    .isEmpty(),
   check("fecha", "La fecha de los intereses en obligatoria")
     .not()
-    .isISO8601()
+    .isEmpty()
     .toDate()
-    .isEmpty(),
+    .isISO8601(),
   check("valor", "El valor de los intereses en obligatorio")
     .not()
     .isEmpty()
     .isNumeric({ no_symbols: true }),
+  check( "estado", "El estado del interes es obligatorio")
+    .custom((value) => {
+      const estado = ["pagado", "sin pagar"];
+      if (!estado.includes(value)) {
+        throw new Error("Estado inválido");
+      }
+      return true
+    })
+    .not()
+    .isEmpty(),
 ];

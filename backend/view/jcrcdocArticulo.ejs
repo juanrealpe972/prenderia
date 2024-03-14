@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>EndPoint de articulo</h2>
+    <h3>Crear articulo</h3>
+    <table>
+      <tr>
+        <td>NÚMERO:</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>NOMBRE DEL SERVICIO</td>
+        <td>Crear articulo</td>
+      </tr>
+      <tr>
+        <td>URI</td>
+        <td>/articulo/registrarArticulo</td>
+      </tr>
+      <tr>
+        <td>DESCRIPCIÓN</td>
+        <td>Permite crear un articulo en mongoDB</td>
+      </tr>
+      <tr>
+        <td>VERBO HTTP</td>
+        <td>POST</td>
+      </tr>
+      <tr>
+        <td>HEADER</td>
+        <td>token : token</td>
+      </tr>
+      <tr>
+        <td>USUARIOS</td>
+        <td>Clientes</td>
+      </tr>
+      <tr>
+        <td>PETICION BODY</td>
+        <td>
+          json: {
+            "nombre": "Neveron",
+            "tipo": "Electrodomestico",
+            "estado":"activo"
+        }
+        </td>
+      </tr>
+      <tr>
+        <td>RESPUESTA JSON</td>
+        <td>
+          Correcto: message: "Articulo registrado con exito"<br />
+          Incorrecto: message:"Error al registrar el articulo"<br />
+          Error: message: `Error en el sistema + error`
+        </td>
+      </tr>
+      <tr>
+        <td>DESARROLLADOR</td>
+        <td>Juan Camilo Realpe Ceron</td>
+      </tr>
+      <tr>
+        <td>Repositorio</td>
+        <td>Null</td>
+      </tr>
+    </table>
+
+    <h3>Listar articulos</h3>
+    <table>
+      <tr>
+        <td>NÚMERO:</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>NOMBRE DEL SERVICIO</td>
+        <td>Listar los articulos</td>
+      </tr>
+      <tr>
+        <td>URI</td>
+        <td>/articulo/listarArticulo</td>
+      </tr>
+      <tr>
+        <td>DESCRIPCIÓN</td>
+        <td>Permite listar los articulos en mongoDB</td>
+      </tr>
+      <tr>
+        <td>VERBO HTTP</td>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <td>HEADER</td>
+        <td>token : token</td>
+      </tr>
+      <tr>
+        <td>USUARIOS</td>
+        <td>Clientes</td>
+      </tr>
+      <tr>
+        <td>PETICION BODY</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>RESPUESTA JSON</td>
+        <td>
+          Correcto: message: "articuloes encontrados: " data:articuloFound <br />
+          Incorrecto: message: "No se encontraron articulos" <br />
+          Error: message: `Error en el sistema + error`
+        </td>
+      </tr>
+      <tr>
+        <td>DESARROLLADOR</td>
+        <td>Juan Camilo Realpe Ceron</td>
+      </tr>
+      <tr>
+        <td>Repositorio</td>
+        <td>Null</td>
+      </tr>
+    </table>
+
+    <h3>Actualizar articulo</h3>
+    <table>
+      <tr>
+        <td>NÚMERO:</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>NOMBRE DEL SERVICIO</td>
+        <td>Actializar articulo</td>
+      </tr>
+      <tr>
+        <td>URI</td>
+        <td>/articulo/actualizarArticulo/:id</td>
+      </tr>
+      <tr>
+        <td>DESCRIPCIÓN</td>
+        <td>Permite actulizar un articulo en mongoDB</td>
+      </tr>
+      <tr>
+        <td>VERBO HTTP</td>
+        <td>PUT</td>
+      </tr>
+      <tr>
+        <td>HEADER</td>
+        <td>token : token</td>
+      </tr>
+      <tr>
+        <td>USUARIOS</td>
+        <td>Clientes</td>
+      </tr>
+      <tr>
+        <td>PETICION BODY</td>
+        <td>
+          json:{
+            "nombre":"Nevera",
+            "tipo":"Electrodomestico",
+            "estado":"desactivado"
+        }
+        </td>
+      </tr>
+      <tr>
+        <td>RESPUESTA JSON</td>
+        <td>
+          Correcto: message: "Articulo actualizado con exito" <br />
+          Incorrecto: message: "Error al actulizar el articulo" <br />
+          Error: message: `Error en el sistema + error`
+        </td>
+      </tr>
+      <tr>
+        <td>DESARROLLADOR</td>
+        <td>Juan Camilo Realpe Ceron</td>
+      </tr>
+      <tr>
+        <td>Repositorio</td>
+        <td>Null</td>
+      </tr>
+    </table>
+
+    <h3>Listar articulo</h3>
+    <table>
+      <tr>
+        <td>NÚMERO:</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>NOMBRE DEL SERVICIO</td>
+        <td>listar un articulo</td>
+      </tr>
+      <tr>
+        <td>URI</td>
+        <td>/articulo/listarArticulo/:id</td>
+      </tr>
+      <tr>
+        <td>DESCRIPCIÓN</td>
+        <td>Permite listar un articulo en mongoDB</td>
+      </tr>
+      <tr>
+        <td>VERBO HTTP</td>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <td>HEADER</td>
+        <td>token : token</td>
+      </tr>
+      <tr>
+        <td>USUARIOS</td>
+        <td>Clientes</td>
+      </tr>
+      <tr>
+        <td>PETICION BODY</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>RESPUESTA JSON</td>
+        <td>
+          Correcto: message: "articulo encontrado: ", data : articuloFound <br />
+          Incorrecto: message: "Error no se encontro el articulo con el id"
+          <br />
+          Error: message: `Error en el sistema + error`
+        </td>
+      </tr>
+      <tr>
+        <td>DESARROLLADOR</td>
+        <td>Juan Camilo Realpe Ceron</td>
+      </tr>
+      <tr>
+        <td>Repositorio</td>
+        <td>Null</td>
+      </tr>
+    </table>
+
+    <h3>Activar Articulo</h3>
+    <table>
+      <tr>
+        <td>NÚMERO:</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>NOMBRE DEL SERVICIO</td>
+        <td>Activar Articulo</td>
+      </tr>
+      <tr>
+        <td>URI</td>
+        <td>/activarArticulo/:id</td>
+      </tr>
+      <tr>
+        <td>DESCRIPCIÓN</td>
+        <td>Permite activar un articulo en mongoDB</td>
+      </tr>
+      <tr>
+        <td>VERBO HTTP</td>
+        <td>PUT</td>
+      </tr>
+      <tr>
+        <td>HEADER</td>
+        <td>token : token</td>
+      </tr>
+      <tr>
+        <td>USUARIOS</td>
+        <td>Clientes</td>
+      </tr>
+      <tr>
+        <td>PETICION BODY</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>RESPUESTA JSON</td>
+        <td>
+          Correcto: message: "Estado activado con exito" <br />
+          Incorrecto: message: "Error al activar el estado del articulo" <br />
+          Error: message: `Error en el sistema + error`
+        </td>
+      </tr>
+      <tr>
+        <td>DESARROLLADOR</td>
+        <td>Juan Camilo Realpe Ceron</td>
+      </tr>
+      <tr>
+        <td>Repositorio</td>
+        <td>Null</td>
+      </tr>
+    </table>
+
+    <h3>Desactivar Articulo</h3>
+    <table>
+      <tr>
+        <td>NÚMERO:</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>NOMBRE DEL SERVICIO</td>
+        <td>Desactivar Articulo</td>
+      </tr>
+      <tr>
+        <td>URI</td>
+        <td>/desactivarArticulo/:id</td>
+      </tr>
+      <tr>
+        <td>DESCRIPCIÓN</td>
+        <td>Permite Desactivar un articulo en mongoDB</td>
+      </tr>
+      <tr>
+        <td>VERBO HTTP</td>
+        <td>PUT</td>
+      </tr>
+      <tr>
+        <td>HEADER</td>
+        <td>token : token</td>
+      </tr>
+      <tr>
+        <td>USUARIOS</td>
+        <td>Clientes</td>
+      </tr>
+      <tr>
+        <td>PETICION BODY</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>RESPUESTA JSON</td>
+        <td>
+          Correcto: message: "Estado desactivado con exito" <br />
+          Incorrecto: message: "Error al activar el estado del articulo" <br />
+          Error: message: `Error en el sistema + error`
+        </td>
+      </tr>
+      <tr>
+        <td>DESARROLLADOR</td>
+        <td>Juan Camilo Realpe Ceron</td>
+      </tr>
+      <tr>
+        <td>Repositorio</td>
+        <td>Null</td>
+      </tr>
+    </table>
+  </body>
+</html>

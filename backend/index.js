@@ -22,6 +22,7 @@ app.set("views", "./view")
 app.get("/documents", (req, res) => {
     res.render("jcrcDocuments.ejs")
 })
+app.use(express.static("./public"))
 
 app.use("/user", routerClient)
 app.use("/interes", routerInteres)

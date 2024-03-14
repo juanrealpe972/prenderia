@@ -8,7 +8,7 @@ const validarInteres = new mongoose.Schema(
     },
     fecha: {
       type: Date,
-      default: Date.now,
+      required: true,
     },
     valor: {
       type: Number,
@@ -17,6 +17,11 @@ const validarInteres = new mongoose.Schema(
     alquiler: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Alquiler",
+      required: true,
+    },
+    estado: {
+      type: String,
+      enum: ["pagado", "sin pagar"],
       required: true,
     },
   },

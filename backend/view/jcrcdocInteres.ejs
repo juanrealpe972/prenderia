@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>EndPoint de interes</h2>
+    <h3>Crear interes</h3>
+    <table>
+      <tr>
+        <td>NÚMERO:</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>NOMBRE DEL SERVICIO</td>
+        <td>Crear interes</td>
+      </tr>
+      <tr>
+        <td>URI</td>
+        <td>/interes/RegistrarInteres</td>
+      </tr>
+      <tr>
+        <td>DESCRIPCIÓN</td>
+        <td>Permite crear un interes en mongoDB</td>
+      </tr>
+      <tr>
+        <td>VERBO HTTP</td>
+        <td>POST</td>
+      </tr>
+      <tr>
+        <td>HEADER</td>
+        <td>token : token</td>
+      </tr>
+      <tr>
+        <td>USUARIOS</td>
+        <td>Clientes</td>
+      </tr>
+      <tr>
+        <td>PETICION BODY</td>
+        <td>
+          json: { "meses":2, "fecha":"2024-03-15", "valor":1000,
+          "alquiler":"65ee8a5ce098996654c6e36c", "estado":"pagado" }
+        </td>
+      </tr>
+      <tr>
+        <td>RESPUESTA JSON</td>
+        <td>
+          Correcto: message: "interes registrado con exito"<br />
+          Incorrecto: message:"Error al registrar el interes"<br />
+          Error: message: `Error en el sistema + error`
+        </td>
+      </tr>
+      <tr>
+        <td>DESARROLLADOR</td>
+        <td>Juan Camilo Realpe Ceron</td>
+      </tr>
+      <tr>
+        <td>Repositorio</td>
+        <td>Null</td>
+      </tr>
+    </table>
+
+    <h3>Listar intereses</h3>
+    <table>
+      <tr>
+        <td>NÚMERO:</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>NOMBRE DEL SERVICIO</td>
+        <td>Listar los intereses</td>
+      </tr>
+      <tr>
+        <td>URI</td>
+        <td>/interes/listarInteres</td>
+      </tr>
+      <tr>
+        <td>DESCRIPCIÓN</td>
+        <td>Permite listar los intereses en mongoDB</td>
+      </tr>
+      <tr>
+        <td>VERBO HTTP</td>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <td>HEADER</td>
+        <td>token : token</td>
+      </tr>
+      <tr>
+        <td>USUARIOS</td>
+        <td>Clientes</td>
+      </tr>
+      <tr>
+        <td>PETICION BODY</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>RESPUESTA JSON</td>
+        <td>
+          Correcto: message: "intereses encontrados: " data:interes <br />
+          Incorrecto: message: "No se encontraron interess" <br />
+          Error: message: `Error en el sistema + error`
+        </td>
+      </tr>
+      <tr>
+        <td>DESARROLLADOR</td>
+        <td>Juan Camilo Realpe Ceron</td>
+      </tr>
+      <tr>
+        <td>Repositorio</td>
+        <td>Null</td>
+      </tr>
+    </table>
+
+    <h3>Actualizar interes</h3>
+    <table>
+      <tr>
+        <td>NÚMERO:</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>NOMBRE DEL SERVICIO</td>
+        <td>Actializar interes</td>
+      </tr>
+      <tr>
+        <td>URI</td>
+        <td>/interes/actualizarInteres/:id</td>
+      </tr>
+      <tr>
+        <td>DESCRIPCIÓN</td>
+        <td>Permite actulizar un interes en mongoDB</td>
+      </tr>
+      <tr>
+        <td>VERBO HTTP</td>
+        <td>PUT</td>
+      </tr>
+      <tr>
+        <td>HEADER</td>
+        <td>token : token</td>
+      </tr>
+      <tr>
+        <td>USUARIOS</td>
+        <td>Clientes</td>
+      </tr>
+      <tr>
+        <td>PETICION BODY</td>
+        <td>
+          json: { "meses":2, "fecha":"2024-03-15", "valor": 25000,
+          "estado":"pagado" }
+        </td>
+      </tr>
+      <tr>
+        <td>RESPUESTA JSON</td>
+        <td>
+          Correcto: message: "interes actualizado con exito" <br />
+          Incorrecto: message: "Error al actulizar el interes" <br />
+          Error: message: `Error en el sistema + error`
+        </td>
+      </tr>
+      <tr>
+        <td>DESARROLLADOR</td>
+        <td>Juan Camilo Realpe Ceron</td>
+      </tr>
+      <tr>
+        <td>Repositorio</td>
+        <td>Null</td>
+      </tr>
+    </table>
+
+    <h3>Listar interes</h3>
+    <table>
+      <tr>
+        <td>NÚMERO:</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>NOMBRE DEL SERVICIO</td>
+        <td>listar un interes</td>
+      </tr>
+      <tr>
+        <td>URI</td>
+        <td>/interes/listarInteres/:id</td>
+      </tr>
+      <tr>
+        <td>DESCRIPCIÓN</td>
+        <td>Permite listar un interes en mongoDB</td>
+      </tr>
+      <tr>
+        <td>VERBO HTTP</td>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <td>HEADER</td>
+        <td>token : token</td>
+      </tr>
+      <tr>
+        <td>USUARIOS</td>
+        <td>Clientes</td>
+      </tr>
+      <tr>
+        <td>PETICION BODY</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>RESPUESTA JSON</td>
+        <td>
+          Correcto: message: "interes encontrado: ", data : interes <br />
+          Incorrecto: message: "Error no se encontro el interes con el id"
+          <br />
+          Error: message: `Error en el sistema + error`
+        </td>
+      </tr>
+      <tr>
+        <td>DESARROLLADOR</td>
+        <td>Juan Camilo Realpe Ceron</td>
+      </tr>
+      <tr>
+        <td>Repositorio</td>
+        <td>Null</td>
+      </tr>
+    </table>
+
+    <h3>Eliminar interes</h3>
+    <table>
+      <tr>
+        <td>NÚMERO:</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>NOMBRE DEL SERVICIO</td>
+        <td>Eliminar interes</td>
+      </tr>
+      <tr>
+        <td>URI</td>
+        <td>/interes/eliminarInteres/:id</td>
+      </tr>
+      <tr>
+        <td>DESCRIPCIÓN</td>
+        <td>Permite eliminar un interes en mongoDB</td>
+      </tr>
+      <tr>
+        <td>VERBO HTTP</td>
+        <td>DELETE</td>
+      </tr>
+      <tr>
+        <td>HEADER</td>
+        <td>token : token</td>
+      </tr>
+      <tr>
+        <td>USUARIOS</td>
+        <td>Clientes</td>
+      </tr>
+      <tr>
+        <td>PETICION BODY</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>RESPUESTA JSON</td>
+        <td>
+          Correcto: message: "interes eliminado con exito" <br />
+          Incorrecto: message: "Error al eliminar el interes" <br />
+          Error: message: `Error en el sistema + error`
+        </td>
+      </tr>
+      <tr>
+        <td>DESARROLLADOR</td>
+        <td>Juan Camilo Realpe Ceron</td>
+      </tr>
+      <tr>
+        <td>Repositorio</td>
+        <td>Null</td>
+      </tr>
+    </table>
+
+    <h3>Mostrar Total de intereses</h3>
+    <table>
+      <tr>
+        <td>NÚMERO:</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>NOMBRE DEL SERVICIO</td>
+        <td>Mostrar total de intereses</td>
+      </tr>
+      <tr>
+        <td>URI</td>
+        <td>/totalinteres</td>
+      </tr>
+      <tr>
+        <td>DESCRIPCIÓN</td>
+        <td>Permite mostrar el total de intereses en mongoDB</td>
+      </tr>
+      <tr>
+        <td>VERBO HTTP</td>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <td>HEADER</td>
+        <td>token : token</td>
+      </tr>
+      <tr>
+        <td>USUARIOS</td>
+        <td>Clientes</td>
+      </tr>
+      <tr>
+        <td>PETICION BODY</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>RESPUESTA JSON</td>
+        <td>
+          Correcto: message: "Total de intereses", data: total <br />
+          Incorrecto: message:"No se encontraron intereses pagados, estas perdiendo" <br />
+          Error: message: `Error en el sistema + error`
+        </td>
+      </tr>
+      <tr>
+        <td>DESARROLLADOR</td>
+        <td>Juan Camilo Realpe Ceron</td>
+      </tr>
+      <tr>
+        <td>Repositorio</td>
+        <td>Null</td>
+      </tr>
+    </table>
+  </body>
+</html>

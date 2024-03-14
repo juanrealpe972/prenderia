@@ -12,15 +12,13 @@ export const validarCreateDatosAlquiler = [
     .toDate(),
   check("meses", "Los meses del interes son obligatorias")
     .not()
-    .isEmpty()
-    .isISO8601()
-    .toDate(),
+    .isEmpty(),
   check("descripcion", "La descripcion del alquiler es obligatoria")
     .not()
     .isEmpty(),
-  check("interes", "Los intereses del alquiler son obligatorios")
+  check("interes", "El interes del alquiler es obligatorio")
     .not()
-    .isNumeric({ no_symbols: true })
+    .toInt()
     .isEmpty(),
   check("cliente", "El cliente del interes es obligatorio").not().isEmpty(),
   check("articulo", "El articulo del interes es obligatorio").not().isEmpty(),
@@ -38,13 +36,13 @@ export const validarUpdateDatosAlquiler = [
   check("meses", "Los meses del interes son obligatorias")
     .not()
     .isEmpty()
-    .isISO8601()
-    .toDate(),
+    .isNumeric(),
   check("descripcion", "La descripcion del alquiler es obligatoria")
     .not()
     .isEmpty(),
   check("interes", "Los intereses del alquiler son obligatorios")
     .not()
-    .isNumeric({ no_symbols: true })
     .isEmpty()
+    .toInt()
+    .isNumeric({ no_symbols: true })
 ];

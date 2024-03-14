@@ -3,103 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
     <title>Document</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 10px;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      h1 {
-        text-align: center;
-      }
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 20px;
-      }
-      td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: left;
-      }
-      tr:nth-child(even) {
-        background-color: #f2f2f2; /* Color de fondo para filas pares */
-      }
-      tr:nth-child(odd) {
-        background-color: #ffffff; /* Color de fondo para filas impares */
-      }
-      table:nth-of-type(1n) tr:hover {
-        background-color: #e0e0e0; /* Color de fondo al pasar el mouse sobre las filas de las tablas de la derecha */
-      }
-    </style>
   </head>
   <body>
-    <h1>Documentación de API REST de prendería</h1>
-    <hr />
     <h2>EndPoint de cliente</h2>
-    <hr />
-    <h3>Crear cliente</h3>
-    <table>
-      <tr>
-        <td>NÚMERO:</td>
-        <td>1</td>
-      </tr>
-      <tr>
-        <td>NOMBRE DEL SERVICIO</td>
-        <td>Crear cliente</td>
-      </tr>
-      <tr>
-        <td>URI</td>
-        <td>/user/registerClient</td>
-      </tr>
-      <tr>
-        <td>DESCRIPCIÓN</td>
-        <td>Permite crear un cliente en mongoDB</td>
-      </tr>
-      <tr>
-        <td>VERBO HTTP</td>
-        <td>POST</td>
-      </tr>
-      <tr>
-        <td>HEADER</td>
-        <td>null</td>
-      </tr>
-      <tr>
-        <td>USUARIOS</td>
-        <td>Clientes</td>
-      </tr>
-      <tr>
-        <td>PETICION BODY</td>
-        <td>
-          json: { "identificacion":1084251889, "nombres":"Juan Camilo Realpe",
-          "direccion":"Isnos-Huila", "telefono":"3157874593",
-          "fecha_nac":"10-06-2005", "password":"123456789" }
-        </td>
-      </tr>
-      <tr>
-        <td>RESPUESTA JSON</td>
-        <td>
-          Correcto: mensaje: "Cliente registrado con exito" Incorrecto: mensaje:
-          "Error al registrar el cliente" Error: mensaje: `Error en el sistema +
-          error`
-        </td>
-      </tr>
-      <tr>
-        <td>DESARROLLADOR</td>
-        <td>Juan Camilo Realpe Ceron</td>
-      </tr>
-      <tr>
-        <td>Repositorio</td>
-        <td>Null</td>
-      </tr>
-    </table>
-
     <h3>Listar clientes</h3>
     <table>
       <tr>
         <td>NÚMERO:</td>
-        <td>2</td>
+        <td>1</td>
       </tr>
       <tr>
         <td>NOMBRE DEL SERVICIO</td>
@@ -132,9 +45,9 @@
       <tr>
         <td>RESPUESTA JSON</td>
         <td>
-          Correcto: mensaje: "Clientes encontrados: ", data:clientes Incorrecto:
-          mensaje: "No se encontraron clientes" Error: mensaje: `Error en el
-          sistema + error`
+          Correcto: message: "Clientes encontrados: " data:clientes <br />
+          Incorrecto: message: "No se encontraron clientes" <br />
+          Error: message: `Error en el sistema + error`
         </td>
       </tr>
       <tr>
@@ -151,7 +64,7 @@
     <table>
       <tr>
         <td>NÚMERO:</td>
-        <td>3</td>
+        <td>2</td>
       </tr>
       <tr>
         <td>NOMBRE DEL SERVICIO</td>
@@ -180,17 +93,17 @@
       <tr>
         <td>PETICION BODY</td>
         <td>
-          json: { "nombres":"Juan Camilo Realpe", "direccion":"Isnos-Huila",
-          "telefono":"3157874593", "fecha_nac":"10-06-2005",
-          "password":"123456789" }
+          json: { "nombres":"Angy Marcella Ceron Muñoz",
+          "direccion":"Isnos-Huila Colombia", "telefono":"3114840168",
+          "fecha_nac":"2089-03-09", "password":"123456789" }
         </td>
       </tr>
       <tr>
         <td>RESPUESTA JSON</td>
         <td>
-          Correcto: mensaje: "Cliente actualizado con exito" Incorrecto:
-          mensaje: "Error al actulizar el cliente" Error: mensaje: `Error en el
-          sistema + error`
+          Correcto: message: "Cliente actualizado con exito" <br />
+          Incorrecto: message: "Error al actulizar el cliente" <br />
+          Error: message: `Error en el sistema + error`
         </td>
       </tr>
       <tr>
@@ -207,7 +120,7 @@
     <table>
       <tr>
         <td>NÚMERO:</td>
-        <td>4</td>
+        <td>3</td>
       </tr>
       <tr>
         <td>NOMBRE DEL SERVICIO</td>
@@ -240,9 +153,10 @@
       <tr>
         <td>RESPUESTA JSON</td>
         <td>
-          Correcto: {mensaje: "Cliente encontrado: ", data : cliente}
-          Incorrecto: mensaje: "Error no se encontro el cliente con el id"
-          Error: mensaje: `Error en el sistema + error`
+          Correcto: message: "Cliente encontrado: ", data : cliente <br />
+          Incorrecto: message: "Error no se encontro el cliente con el id"
+          <br />
+          Error: message: `Error en el sistema + error`
         </td>
       </tr>
       <tr>
@@ -259,7 +173,7 @@
     <table>
       <tr>
         <td>NÚMERO:</td>
-        <td>5</td>
+        <td>4</td>
       </tr>
       <tr>
         <td>NOMBRE DEL SERVICIO</td>
@@ -292,9 +206,9 @@
       <tr>
         <td>RESPUESTA JSON</td>
         <td>
-          Correcto: mensaje: "Cliente eliminado con exito" Incorrecto: mensaje:
-          "Error al eliminar el cliente" Error: mensaje: `Error en el sistema +
-          error`
+          Correcto: message: "Cliente eliminado con exito" <br />
+          Incorrecto: message: "Error al eliminar el cliente" <br />
+          Error: message: `Error en el sistema + error`
         </td>
       </tr>
       <tr>

@@ -1,11 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <h2>EndPoint de alquiler</h2>
+    <h3>Crear alquiler</h3>
+    <table>
+      <tr>
+        <td>NÚMERO:</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>NOMBRE DEL SERVICIO</td>
+        <td>Crear alquiler</td>
+      </tr>
+      <tr>
+        <td>URI</td>
+        <td>/alquiler/registrarAlquiler</td>
+      </tr>
+      <tr>
+        <td>DESCRIPCIÓN</td>
+        <td>Permite crear un alquiler en mongoDB</td>
+      </tr>
+      <tr>
+        <td>VERBO HTTP</td>
+        <td>POST</td>
+      </tr>
+      <tr>
+        <td>HEADER</td>
+        <td>token : token</td>
+      </tr>
+      <tr>
+        <td>USUARIOS</td>
+        <td>Clientes</td>
+      </tr>
+      <tr>
+        <td>PETICION BODY</td>
+        <td>
+          json: {
+            "valor": 100000,
+            "fecha":"2024-03-15",
+            "meses": 3,
+            "descripcion": "Alquilar una nevera de color rojo en buen estado",
+            "interes": 30000,
+            "cliente": "65ee83902038af675f738153",
+            "articulo": "65ee83b82038af675f738156"
+        }
+        </td>
+      </tr>
+      <tr>
+        <td>RESPUESTA JSON</td>
+        <td>
+          Correcto: message: "alquiler registrado con exito"<br />
+          Incorrecto: message:"Error al registrar el alquiler"<br />
+          Error: message: `Error en el sistema + error`
+        </td>
+      </tr>
+      <tr>
+        <td>DESARROLLADOR</td>
+        <td>Juan Camilo Realpe Ceron</td>
+      </tr>
+      <tr>
+        <td>Repositorio</td>
+        <td>Null</td>
+      </tr>
+    </table>
+
+    <h3>Listar alquilers</h3>
+    <table>
+      <tr>
+        <td>NÚMERO:</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>NOMBRE DEL SERVICIO</td>
+        <td>Listar los alquileres</td>
+      </tr>
+      <tr>
+        <td>URI</td>
+        <td>/alquiler/listarAlquiler</td>
+      </tr>
+      <tr>
+        <td>DESCRIPCIÓN</td>
+        <td>Permite listar los alquileres en mongoDB</td>
+      </tr>
+      <tr>
+        <td>VERBO HTTP</td>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <td>HEADER</td>
+        <td>token : token</td>
+      </tr>
+      <tr>
+        <td>USUARIOS</td>
+        <td>Clientes</td>
+      </tr>
+      <tr>
+        <td>PETICION BODY</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>RESPUESTA JSON</td>
+        <td>
+          Correcto: message: "alquileres encontrados: " data:alquiler <br />
+          Incorrecto: message: "No se encontraron alquileres" <br />
+          Error: message: `Error en el sistema + error`
+        </td>
+      </tr>
+      <tr>
+        <td>DESARROLLADOR</td>
+        <td>Juan Camilo Realpe Ceron</td>
+      </tr>
+      <tr>
+        <td>Repositorio</td>
+        <td>Null</td>
+      </tr>
+    </table>
+
+    <h3>Actualizar alquiler</h3>
+    <table>
+      <tr>
+        <td>NÚMERO:</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>NOMBRE DEL SERVICIO</td>
+        <td>Actializar alquiler</td>
+      </tr>
+      <tr>
+        <td>URI</td>
+        <td>/alquiler/actualizarAlquiler/:id</td>
+      </tr>
+      <tr>
+        <td>DESCRIPCIÓN</td>
+        <td>Permite actulizar un alquiler en mongoDB</td>
+      </tr>
+      <tr>
+        <td>VERBO HTTP</td>
+        <td>PUT</td>
+      </tr>
+      <tr>
+        <td>HEADER</td>
+        <td>token : token</td>
+      </tr>
+      <tr>
+        <td>USUARIOS</td>
+        <td>Clientes</td>
+      </tr>
+      <tr>
+        <td>PETICION BODY</td>
+        <td>
+          json:{
+            "valor": 1000000,
+            "fecha":"2024-03-16",
+            "meses": 4,
+            "descripcion": "Alquilar una nevera de color rojo en buen estado",
+            "interes": 50000
+        }
+        </td>
+      </tr>
+      <tr>
+        <td>RESPUESTA JSON</td>
+        <td>
+          Correcto: message: "alquiler actualizado con exito" <br />
+          Incorrecto: message: "Error al actulizar el alquiler" <br />
+          Error: message: `Error en el sistema + error`
+        </td>
+      </tr>
+      <tr>
+        <td>DESARROLLADOR</td>
+        <td>Juan Camilo Realpe Ceron</td>
+      </tr>
+      <tr>
+        <td>Repositorio</td>
+        <td>Null</td>
+      </tr>
+    </table>
+
+    <h3>Listar alquiler</h3>
+    <table>
+      <tr>
+        <td>NÚMERO:</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>NOMBRE DEL SERVICIO</td>
+        <td>listar un alquiler</td>
+      </tr>
+      <tr>
+        <td>URI</td>
+        <td>/alquiler/listarAlquiler/:id</td>
+      </tr>
+      <tr>
+        <td>DESCRIPCIÓN</td>
+        <td>Permite listar un alquiler en mongoDB</td>
+      </tr>
+      <tr>
+        <td>VERBO HTTP</td>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <td>HEADER</td>
+        <td>token : token</td>
+      </tr>
+      <tr>
+        <td>USUARIOS</td>
+        <td>Clientes</td>
+      </tr>
+      <tr>
+        <td>PETICION BODY</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>RESPUESTA JSON</td>
+        <td>
+          Correcto: message: "alquiler encontrado: ", data : alquiler <br />
+          Incorrecto: message: "Error no se encontro el alquiler con el id"
+          <br />
+          Error: message: `Error en el sistema + error`
+        </td>
+      </tr>
+      <tr>
+        <td>DESARROLLADOR</td>
+        <td>Juan Camilo Realpe Ceron</td>
+      </tr>
+      <tr>
+        <td>Repositorio</td>
+        <td>Null</td>
+      </tr>
+    </table>
+
+    <h3>Eliminar alquiler</h3>
+    <table>
+      <tr>
+        <td>NÚMERO:</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>NOMBRE DEL SERVICIO</td>
+        <td>Eliminar alquiler</td>
+      </tr>
+      <tr>
+        <td>URI</td>
+        <td>/alquiler/eliminarAlquiler/:id</td>
+      </tr>
+      <tr>
+        <td>DESCRIPCIÓN</td>
+        <td>Permite eliminar un alquiler en mongoDB</td>
+      </tr>
+      <tr>
+        <td>VERBO HTTP</td>
+        <td>DELETE</td>
+      </tr>
+      <tr>
+        <td>HEADER</td>
+        <td>token : token</td>
+      </tr>
+      <tr>
+        <td>USUARIOS</td>
+        <td>Clientes</td>
+      </tr>
+      <tr>
+        <td>PETICION BODY</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>RESPUESTA JSON</td>
+        <td>
+          Correcto: message: "Alquiler eliminado con exito" <br />
+          Incorrecto: message: "Error al eliminar el alquiler" <br />
+          Error: message: `Error en el sistema + error`
+        </td>
+      </tr>
+      <tr>
+        <td>DESARROLLADOR</td>
+        <td>Juan Camilo Realpe Ceron</td>
+      </tr>
+      <tr>
+        <td>Repositorio</td>
+        <td>Null</td>
+      </tr>
+    </table>
+
+    <h3>Alquileres pagados por cliente</h3>
+    <table>
+      <tr>
+        <td>NÚMERO:</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>NOMBRE DEL SERVICIO</td>
+        <td>Alquileres pagados por cliente</td>
+      </tr>
+      <tr>
+        <td>URI</td>
+        <td>/alquilerPagados/:id</td>
+      </tr>
+      <tr>
+        <td>DESCRIPCIÓN</td>
+        <td>Permite mostrar los alquileres pagados de un cliente en mongoDB</td>
+      </tr>
+      <tr>
+        <td>VERBO HTTP</td>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <td>HEADER</td>
+        <td>token : token</td>
+      </tr>
+      <tr>
+        <td>USUARIOS</td>
+        <td>Clientes</td>
+      </tr>
+      <tr>
+        <td>PETICION BODY</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>RESPUESTA JSON</td>
+        <td>
+          Correcto: message: "Alquileres pagados", data: alquileres <br />
+          Incorrecto: message: "Error al encontrar los alquileres pagados del Cliente con el id" <br />
+          Error: message: `Error en el sistema + error`
+        </td>
+      </tr>
+      <tr>
+        <td>DESARROLLADOR</td>
+        <td>Juan Camilo Realpe Ceron</td>
+      </tr>
+      <tr>
+        <td>Repositorio</td>
+        <td>Null</td>
+      </tr>
+    </table>
+
+    <h3>Mostrar intereses de alquiler pendiente</h3>
+    <table>
+      <tr>
+        <td>NÚMERO:</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>NOMBRE DEL SERVICIO</td>
+        <td>Mostrar intereses de alquiler pendiente</td>
+      </tr>
+      <tr>
+        <td>URI</td>
+        <td>/interesPendiente</td>
+      </tr>
+      <tr>
+        <td>DESCRIPCIÓN</td>
+        <td>Permite mostrar los intereses de alquiler pendientes en mongoDB</td>
+      </tr>
+      <tr>
+        <td>VERBO HTTP</td>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <td>HEADER</td>
+        <td>token : token</td>
+      </tr>
+      <tr>
+        <td>USUARIOS</td>
+        <td>Clientes</td>
+      </tr>
+      <tr>
+        <td>PETICION BODY</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>RESPUESTA JSON</td>
+        <td>
+          Correcto: message: "Intereses pendientes: ", data: interesPendiente <br />
+          Incorrecto: message: "Error al mostrar los intereses pendientes con el id" <br />
+          Error: message: `Error en el sistema + error`
+        </td>
+      </tr>
+      <tr>
+        <td>DESARROLLADOR</td>
+        <td>Juan Camilo Realpe Ceron</td>
+      </tr>
+      <tr>
+        <td>Repositorio</td>
+        <td>Null</td>
+      </tr>
+    </table>
+  </body>
 </html>
