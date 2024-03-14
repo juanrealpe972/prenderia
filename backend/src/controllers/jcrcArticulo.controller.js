@@ -9,7 +9,7 @@ export const createArticulo = async (req, res) => {
       return res.status(400).json(errors)
     }
 
-    const { nombre, tipo } = req.body;
+    const { nombre, tipo, estado } = req.body;
     const newArticulo = new Articulo({
       nombre,
       tipo,
