@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { createInteres, deleteInteres, getInteres, getIntereses, totalInteres, updateInteres } from "../controllers/jcrcInteres.controller.js";
+import { createInteres, deleteInteres, getInteres, getIntereses, interesPendiente, totalInteres, updateInteres } from "../controllers/jcrcInteres.controller.js";
 import { validarToken } from "../controllers/jcrcAuthClient.controller.js";
 import { validarCreateDatosInteres, validarUpdateDatosInteres } from "../validations/jcrcInteres.validation.js";
 
@@ -10,6 +10,7 @@ routerInteres.get("/listarInteres/:id", validarToken, getInteres)
 routerInteres.post("/RegistrarInteres", validarToken, validarCreateDatosInteres, createInteres)
 routerInteres.put("/actualizarInteres/:id", validarToken, validarUpdateDatosInteres, updateInteres)
 routerInteres.delete("/eliminarInteres/:id", validarToken, deleteInteres)
-routerInteres.get("/totalinteres", validarToken, totalInteres)
+routerInteres.post("/totalinteres", validarToken, totalInteres)
+routerInteres.get("/interesPendiente/:id", validarToken, interesPendiente)
 
 export default routerInteres

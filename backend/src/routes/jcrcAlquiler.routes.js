@@ -1,5 +1,5 @@
 import {Router} from "express"
-import { alquileresPagados, createAlquiler, deleteAlquiler, getAlquiler, getAlquilers, interesPendiente, updateAlquiler } from "../controllers/jcrcAlquiler.controller.js"
+import { alquileresPagados, createAlquiler, deleteAlquiler, getAlquiler, getAlquilers, updateAlquiler } from "../controllers/jcrcAlquiler.controller.js"
 import { validarToken } from "../controllers/jcrcAuthClient.controller.js"
 import { validarCreateDatosAlquiler, validarUpdateDatosAlquiler } from "../validations/jcrcAlquiler.validation.js"
 
@@ -11,6 +11,5 @@ routerAlquiler.post("/registrarAlquiler", validarToken, validarCreateDatosAlquil
 routerAlquiler.put("/actualizarAlquiler/:id", validarToken, validarUpdateDatosAlquiler, updateAlquiler)
 routerAlquiler.delete("/eliminarAlquiler/:id",validarToken, deleteAlquiler)
 routerAlquiler.get("/alquilerPagados/:id", validarToken, alquileresPagados)
-routerAlquiler.get("/interesPendiente", validarToken, interesPendiente)
 
 export default routerAlquiler

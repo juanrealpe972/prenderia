@@ -287,7 +287,7 @@
       </tr>
     </table>
 
-    <h3>Alquileres pagados por cliente</h3>
+    <h3>Alquileres pagados de un cliente</h3>
     <table>
       <tr>
         <td>NÚMERO:</td>
@@ -295,7 +295,7 @@
       </tr>
       <tr>
         <td>NOMBRE DEL SERVICIO</td>
-        <td>Alquileres pagados por cliente</td>
+        <td>Alquileres pagados de un cliente</td>
       </tr>
       <tr>
         <td>URI</td>
@@ -324,60 +324,9 @@
       <tr>
         <td>RESPUESTA JSON</td>
         <td>
-          Correcto: message: "Alquileres pagados", data: alquileres <br />
-          Incorrecto: message: "Error al encontrar los alquileres pagados del Cliente con el id" <br />
-          Error: message: `Error en el sistema + error`
-        </td>
-      </tr>
-      <tr>
-        <td>DESARROLLADOR</td>
-        <td>Juan Camilo Realpe Ceron</td>
-      </tr>
-      <tr>
-        <td>Repositorio</td>
-        <td>Null</td>
-      </tr>
-    </table>
-
-    <h3>Mostrar intereses de alquiler pendiente</h3>
-    <table>
-      <tr>
-        <td>NÚMERO:</td>
-        <td>7</td>
-      </tr>
-      <tr>
-        <td>NOMBRE DEL SERVICIO</td>
-        <td>Mostrar intereses de alquiler pendiente</td>
-      </tr>
-      <tr>
-        <td>URI</td>
-        <td>/interesPendiente</td>
-      </tr>
-      <tr>
-        <td>DESCRIPCIÓN</td>
-        <td>Permite mostrar los intereses de alquiler pendientes en mongoDB</td>
-      </tr>
-      <tr>
-        <td>VERBO HTTP</td>
-        <td>GET</td>
-      </tr>
-      <tr>
-        <td>HEADER</td>
-        <td>token : token</td>
-      </tr>
-      <tr>
-        <td>USUARIOS</td>
-        <td>Clientes</td>
-      </tr>
-      <tr>
-        <td>PETICION BODY</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>RESPUESTA JSON</td>
-        <td>
-          Correcto: message: "Intereses pendientes: ", data: interesPendiente <br />
-          Incorrecto: message: "Error al mostrar los intereses pendientes con el id" <br />
+          Correcto: message: "interés pagados de los alquiler de un cliente", cliente: cliente.nombres, alquileres, intereses: interesesPagados <br />
+          Correcto: message: "A este cliente no le han pagado intereses" <br />
+          Incorrecto por cliente: message: "Cliente no encontrado" <br />
           Error: message: `Error en el sistema + error`
         </td>
       </tr>

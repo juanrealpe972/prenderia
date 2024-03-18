@@ -307,13 +307,16 @@
       </tr>
       <tr>
         <td>PETICION BODY</td>
-        <td></td>
+        <td>JSON: {
+          "mes":"2024-03-15"
+        }
+        </td>
       </tr>
       <tr>
         <td>RESPUESTA JSON</td>
         <td>
-          Correcto: message: "Total de intereses", data: total <br />
-          Incorrecto: message:"No se encontraron intereses pagados, estas perdiendo" <br />
+          Correcto: message: "Total de intereses para ${mes}-${anio} es:`, recaudado: totalIntereses <br />
+          Incorrecto: message:"No hay intereses recaudados para ${mes}-${anio}." <br />
           Error: message: `Error en el sistema + error`
         </td>
       </tr>
@@ -326,5 +329,59 @@
         <td>Null</td>
       </tr>
     </table>
+
+    <h3>Mostrar intereses de alquiler pendiente</h3>
+    <table>
+      <tr>
+        <td>NÚMERO:</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>NOMBRE DEL SERVICIO</td>
+        <td>Mostrar intereses de alquiler pendiente</td>
+      </tr>
+      <tr>
+        <td>URI</td>
+        <td>/interesPendiente/:id</td>
+      </tr>
+      <tr>
+        <td>DESCRIPCIÓN</td>
+        <td>Permite mostrar los intereses de alquiler pendientes en mongoDB</td>
+      </tr>
+      <tr>
+        <td>VERBO HTTP</td>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <td>HEADER</td>
+        <td>token : token</td>
+      </tr>
+      <tr>
+        <td>USUARIOS</td>
+        <td>Clientes</td>
+      </tr>
+      <tr>
+        <td>PETICION BODY</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>RESPUESTA JSON</td>
+        <td>
+          Correcto: message:"Total de meses pendientes sin pagar": totalMeses,
+          "Total del valor pendiente sin pagar": totalValor <br />
+          Incorrecto: message: "No hay intereses pendientes para este alquiler" <br />
+          Error: message: `Error en el sistema + error`
+        </td>
+      </tr>
+      <tr>
+        <td>DESARROLLADOR</td>
+        <td>Juan Camilo Realpe Ceron</td>
+      </tr>
+      <tr>
+        <td>Repositorio</td>
+        <td>Null</td>
+      </tr>
+    </table>
+
   </body>
 </html>
